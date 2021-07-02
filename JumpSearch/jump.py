@@ -12,7 +12,7 @@ def search(items, length, val):
         step = step + int(math.sqrt(length))
         if prev >= length:
             return -1
-
+    print(prev, step)
     while val < items[prev]:
         prev = prev + 1
         if prev == min(step, length):
@@ -23,7 +23,8 @@ def search(items, length, val):
     return -1
 
 
-allItems = [[1, 2, 3, 4], [1, 3], [2], [], [1, 4, 5, 6, 7, 3, 2]]
+allItems = [[1, 2, 3, 4]]
+# , [1, 3], [2], [], [1, 4, 5, 6, 7, 3, 2]]
 item = 3
 for elements in allItems:
     elements.sort()
