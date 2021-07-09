@@ -1,11 +1,12 @@
 import logging
 
-import BinarySearch
+import BinarySearch as bs
+import BinarySearch.exponential
 
 logging.basicConfig(level=logging.INFO)
 
 
-def main():
+def main(callFun):
     elements = [
         [0, 1, 2, 3, 4, 5, 6, 7, 8],
         [1, 3],
@@ -16,7 +17,7 @@ def main():
     searchingElement = 3
     for ele in elements:
         ele.sort()
-        pos = func(ele, searchingElement)
+        pos = callFun(ele, searchingElement)
         if pos == -1:
             logging.warning("searching element:%s NOT FOUND in elements:%s", searchingElement, ele)
         else:

@@ -1,15 +1,14 @@
 import math
+from BinarySearch import iteration
 
 
 def search(a, y):
-    inc = 0
-    i = int(math.pow(2, inc))
+    i = 1
     n = len(a)
-    while i <= n - 1 and y < a[i]:
-        inc = inc + 1
-        i = int(math.pow(2, inc))
-    print(i, i/2, min(i, n-1))
+    while i < n and y > a[i]:
+        i = i*2
+    return iteration.search(a, i // 2, min(i, n - 1), y)
 
 
 def main(items, y):
-    search(items, y)
+    return search(items, y)
