@@ -1,6 +1,5 @@
 import logging
 
-import BinarySearch as bs
 import BinarySearch.exponential
 
 logging.basicConfig(level=logging.INFO)
