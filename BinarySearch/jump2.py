@@ -1,26 +1,19 @@
-import logging
 import math
-
-logging.basicConfig(level=logging.INFO)
 
 
 def search(a, n, x):
     p = 0
     b = int(math.sqrt(n))
     i = b
-    while x > a[i-1]:
+    while x > a[i - 1]:
         p = i
         i = i + b
         if p >= n:
             return -1
-    print('p:', p, 'i:', i)
-    print(a[p])
     while x < a[p]:
         p = p + 1
         if p == i:
             return -1
-    print('p:', p, 'i:', i)
-    print(a[p])
     if x == a[p]:
         return p
     return -1
