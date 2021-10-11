@@ -1,4 +1,4 @@
-from Sorting import selection, bubble, insertion
+from Sorting import selection, bubble, insertion, mergeSort
 import logging
 
 logging.basicConfig(level=logging.INFO)
@@ -25,6 +25,7 @@ def main(f):
 if __name__ == '__main__':
     # f = selection.sorting
     # f = bubble.sorting
-    f = insertion.sorting
+    # f = insertion.sorting
+    f = mergeSort.sorting
     main(f)
 
